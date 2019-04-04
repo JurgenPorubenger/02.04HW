@@ -1,0 +1,65 @@
+html, body, section {
+    margin: 0;
+    padding: 0;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.headline {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+    background-color: aqua;
+}
+.childHeadline {
+    border: 1px solid yellow;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33%;
+    justify-content: center;
+}
+.childHeadline:empty {
+    background-color: orange;
+}
+.childHeadline:not(:empty) {
+    background-color: white;
+}
+
+.textline {
+    position: relative;
+    padding: 10px;
+}
+.textline:before {
+    position: absolute;
+    content: url("img/biohazard-solid.svg");
+    border: 1px black;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 48.5%;
+}
+.textline:after {
+    position: absolute;
+    content: url("img/biohazard-solid.svg");
+    border: 1px black;
+    width: 30px;
+    height: 30px;
+    bottom: 0px;
+    left: 48.5%;
+}
+.childTextline {
+    text-align: center;
+}
+
+.linkClass {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
